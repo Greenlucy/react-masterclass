@@ -31,13 +31,17 @@ const rotationAnimation = keyframes`
 `;
 
 const Emoji = styled.span`
+  font-size: 25px;
+`;
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor};
   font-size: 36px;
 `;
 
 const Box = styled.div`
   height: 200px;
   width: 200px;
-  background-color: tomato;
+  background-color: ${(props) => props.theme.backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +54,7 @@ const Box = styled.div`
 function App() {
   return (
     <Wrapper>
+      <Title>Hello</Title>
       <Box>
         <Emoji>😊</Emoji>
       </Box>

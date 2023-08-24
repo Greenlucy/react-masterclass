@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 // ContainerProps랑 CircleProps가 동일한 object 구성의 interface 이므로 같이 써줘도 됨. 
@@ -27,6 +28,9 @@ interface CircleProps {
 // 1. CircleProps는 Component Circle의 props
 function Circle({bgColor, bdColor, text = "default text"}: CircleProps){
     // 2. ContainerProps는 styled Component인 Container의 props
+    const [counter, setCounter] = useState<number|string>(0);   // default값을 1로 설정하면 TypeScript가 counter를 number로 추정함. 
+    setCounter("hello")
+
     return (
         <Container bgColor={bgColor} bdColor={bdColor?? bgColor}>
             {text}

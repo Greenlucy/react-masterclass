@@ -12,8 +12,8 @@ function App() {
   return (
     // 3. Circle을 부르는 것이므로, CirclProps를 사용해야 함. 
     <div>
-      <Circle bgColor1="teal" />
-      <Circle bgColor1="tomato" />
+      <Circle bgColor="teal" bdColor="yellow"/>
+      <Circle bgColor="tomato" />
     </div>
   );
 }
